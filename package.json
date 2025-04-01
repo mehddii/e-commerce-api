@@ -1,0 +1,20 @@
+{
+  "name": "e-commerce-api",
+  "version": "1.0.0",
+  "description": "An e-commerce api built using nodejs",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com-mehddii:mehddii/e-commerce-api.git"
+  },
+  "author": "mehdi",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^5.1.0",
+    "nodemon": "^3.1.9"
+  }
+}
