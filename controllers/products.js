@@ -94,4 +94,12 @@ productsRouter.put('/:id', (request, response) => {
   response.json(product)
 })
 
+productsRouter.use((request, response) => {
+  return response.status(404).json(
+    {
+      error: 'Unknown endpoint'
+    }
+  ) 
+})
+
 module.exports = productsRouter
