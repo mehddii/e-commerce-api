@@ -1,4 +1,4 @@
-require('dotenv').config()
+const ENV = require('./config').ENV
 const morgan = require('morgan')
 
 const unknownEndPoint = (request, response) => {
@@ -9,7 +9,7 @@ const unknownEndPoint = (request, response) => {
   ) 
 }
 
-const requestLogger = process.env.ENV === 'production' ? 
+const requestLogger = ENV === 'production' ? 
   morgan('combined') : 
   morgan('dev')
 
