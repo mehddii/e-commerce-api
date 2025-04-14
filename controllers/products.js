@@ -1,4 +1,5 @@
 const productsRouter = require('express').Router()
+const middleware = require('../utils/middleware') 
 
 let products = [
   {
@@ -94,12 +95,6 @@ productsRouter.put('/:id', (request, response) => {
   response.json(product)
 })
 
-productsRouter.use((request, response) => {
-  return response.status(404).json(
-    {
-      error: 'Unknown endpoint'
-    }
-  ) 
-})
+productsRouter.use(middleware.unknownEndPoint)
 
 module.exports = productsRouter
